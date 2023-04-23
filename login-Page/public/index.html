@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/07f9ee633a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main">
+                <form action="http://localhost:3000/signup" method="POST">
+                    <h2>SignUp to the maze</h2>
+                    <div class="box"><i class="fa fa-user"></i>
+                        <input type="text" class="box" id="name" name="name" placeholder="Name" required />
+                    </div>
+
+                    <div class="box"> <i class="fa fa-envelope"></i>
+                        <input type="email" class="box" id="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="box"> <i class="fa fa-mobile"></i>
+                        <input type="number" class="box" id="mobile" name="mobile" placeholder="Mobile" required />
+                    </div>
+                    <div class="box"> <i class="fa fa-key"></i>
+                        <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                    </div>
+
+<!--                 <button  />-->
+                    <button type="submit" value="submit" id="submit" class="btn">Submit</button>
+                    <h3 style="text-align: center; background: white; color: black">Already have an account? <a href="login.html">Click here</a></h3>
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

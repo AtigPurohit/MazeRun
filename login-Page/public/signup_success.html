@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+    #strt {
+      font-family: 'Sedgwick Ave Display', cursive;
+    }
+
+    .atig {
+      background: url("Blue.jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    #atgbtn {
+      cursor: pointer;
+    }
+    .popup .overlay{
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      z-index: 1;
+      display: none;
+    }
+    .popup .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(0);
+      background: url("Ice.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      border-radius: 10px;
+      width: 95%;
+      max-width: 500px;
+      height: 220px;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+    .popup .close-btn{
+      position: absolute;
+      color: #fff;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+      background: black;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+    }
+
+    .popup .close-btn:hover{
+      color: #fff;
+      background: #000;
+      cursor: pointer;
+    }
+    .popup.active .overlay{
+      display: block;
+    }
+    .popup.active .content{
+      transition: all 300ms ease-in-out;
+      transform: translate(-50%,-50%) scale(1);
+    }
+    #hint {
+      font-size: 30px;
+      font-family: 'Sedgwick Ave Display', cursive;
+    }
+
+
+  </style>
+</head>
+
+<body class="atig">
+
+  <div id="page">
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are done.</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+      </div>
+    </div>
+
+    <br>
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+          <option value="10">Easy</option>
+          <option value="15">Medium</option>
+          <option value="25">Hard</option>
+          <option value="38">Extreme</option>
+        </select>
+      </div>
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+    </div>
+
+    <div id="view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+
+    <p id="instructions">Use arrow keys to move the key to the house!</p>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">&times;
+        </div>
+        <h2 id="hint">Hints</h2>
+        <p class="font-serif">
+          <b>Easy</b> :- 1 : "If you hit a dead end, try to backtrack"<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;2 : "There are two dead ends, try to avoid them"<br>
+         <b>Medium</b> :- "You may have to take the longer router"<br>
+          <b>Hard</b> :- "Some walls are invisible, if you're stuck keep on trying" <br>
+         <b> Extreme</b> :- 38 moves => You have to move 38 times <br>
+        </p>
+      </div>
+    </div>
+    <a id="atgbtn" onclick="togglePopup()" class=" relative inline-block px-4 py-2 font-medium group mt-5">
+      <span
+        class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+      <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black "></span>
+      <span class="relative text-black group-hover:text-white"> Hints </span>
+    </a>
+
+  </div>
+
+
+
+  <div id="userName"></div>
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

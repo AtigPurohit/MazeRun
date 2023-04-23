@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("Blue.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    /* background-color: black; */
+}
+.container{
+    /* border: 12px solid red; */
+    color: white;
+    position: absolute;
+    top: 8%;
+    left: 65%;
+    /* border: 2px solid white; */
+    border-radius: 50px;
+    /* box-shadow: 10px 10px 8px 10px #888888; */
+    box-shadow: rgb(246, 246, 246) 0px 20px 50px -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*opacity: 50;*/
+}
+.container h2{
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 5px solid purple ;
+    /* margin-bottom: 23px; */
+    padding: 13px 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 30px 3px;
+ 
+}
+.box{
+    /* border-bottom: 2px solid purple ; */
+    margin: 12px 0px;
+}
+.box input{
+    background: none;
+   outline: none;
+    width: 75%;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+
+}
+.box input::placeholder{
+    color: white;
+}
+.btn{
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    margin: 10px 160px; 
+    padding: 8px; 
+    border-radius: 10px;
+    border: 2px solid purple;
+    color: white;
+    /* background-color: darkmagenta; */
+    font-size: 21px;
+    font-weight: bold;
+    background: none;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+.btn:hover {
+    opacity: 0.5;
+    color: darkmagenta;
+     background-color: white;
+    /* background: none; */
+    border-color: purple;
+}
+.box i{
+    padding: 0px 12px;
+    width: 25px;
+    font-size: 30px;
+    /* float: left; */
+    text-align: center;
+}
+#button{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 915px) {
+    .container h1{
+        font-size: 25px;
+        padding: 13px 0;
+        
+    }
+    .container{
+        position: absolute;
+        top: 12%;
+        left: 20%;
+        text-align: center;
+    }
+    .btn{
+        width: 25%;
+        margin: 12px 3px;
+        padding: 6px;
+        font-size: 12px;
+    } 
+}
+@media (max-width: 550px){
+    .container{
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        text-align: center;
+}
+}
+@media (max-width: 1050px){
+    .container{  
+        position: absolute;
+        top: 12%;
+        left: 30%;
+        text-align: center;
+    }
+}
+@media (max-width: 300px){
+    .container{
+       
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        text-align: center;
+}
+
+}
+@media (max-width: 450px){
+    .container{
+       
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        text-align: center;
+}
+}
