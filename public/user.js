@@ -1,5 +1,5 @@
 function getUserName() {
-    fetch('http://localhost:3000/profile')
+    fetch('https://mazerun-4jiw.onrender.com/profile')
         .then(response => response.json())
         .then(data => {
             const userName = data.name;
@@ -14,7 +14,7 @@ window.onload = function() {
 };
 
 function getSuccessAttempts() {
-    fetch('http://localhost:3000/success')
+    fetch('https://mazerun-4jiw.onrender.com//success')
         .then(response => response.json())
         .then(data => {
             const obj = data.length > 0 ? data[0] : {};
@@ -44,7 +44,7 @@ function getSuccessAttempts() {
         });
 }
 function togglePopup() {
-    fetch('http://localhost:3000/score')
+    fetch('https://mazerun-4jiw.onrender.com//score')
     .then(response => response.json())  
     .then(data => {
         console.log(data)
