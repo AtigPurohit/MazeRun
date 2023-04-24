@@ -3,7 +3,7 @@ function rand(max) {
 }
 
 function getUserName() {
-    fetch('localhost:3000/profile')
+    fetch('https://mazerun-4jiw.onrender.com/profile')
         .then(response => response.json())
         .then(data => {
             const userName = data.name;
@@ -48,7 +48,7 @@ function changeBrightness(factor, sprite) {
 }
 let easy, medium, hard, extreme;
 function getSuccessAttempts() {
-    fetch('http://localhost:3000/success')
+    fetch('https://mazerun-4jiw.onrender.com/success')
         .then(response => response.json())
         .then(data => {
             const obj = data.length > 0 ? data[0] : {};
@@ -97,7 +97,7 @@ function displayVictoryMess(moves) {
         }
     }
 
-    fetch('http://localhost:3000/upload', {
+    fetch('https://mazerun-4jiw.onrender.com/upload', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
