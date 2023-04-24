@@ -14,7 +14,7 @@ window.onload = function() {
 };
 
 function getSuccessAttempts() {
-    fetch('https://mazerun-4jiw.onrender.com//success')
+    fetch('https://mazerun-4jiw.onrender.com/success')
         .then(response => response.json())
         .then(data => {
             const obj = data.length > 0 ? data[0] : {};
@@ -44,7 +44,7 @@ function getSuccessAttempts() {
         });
 }
 function togglePopup() {
-    fetch('https://mazerun-4jiw.onrender.com//score')
+    fetch('https://mazerun-4jiw.onrender.com/score')
     .then(response => response.json())  
     .then(data => {
         console.log(data)
